@@ -1,8 +1,12 @@
 import React, { PropTypes } from 'react';
-import  { groupUsersByName } from '../filters/filters';
+import  { groupUsersByName, filterSearch } from '../filters/filters';
 import UserGroup from './user_group';
 
-const UserList = ({ list }) => {
+const UserList = ({ list, term }) => {
+  if (term) {
+    list = filterSearch(list, term);
+  }
+  
   const groups = groupUsersByName(list);
   
   const groupAndSortByName = Object.keys(groups)
@@ -23,7 +27,8 @@ const UserList = ({ list }) => {
 };
 
 UserList.propTypes = {
-  list: PropTypes.array.isRequired
+  list: PropTypes.array.isRequired,
+  term: PropTypes.string.isRequired
 };
 
 export default UserList;
