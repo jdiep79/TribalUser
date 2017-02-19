@@ -34,9 +34,9 @@ const SortNameRadio = ({ sort, onRadioInputChange  }) => {
   );
 };
 
-export default SortNameRadio;
+SortNameRadio.propTypes = {
+  sort: PropTypes.string.isRequired,
+  onRadioInputChange: PropTypes.func.isRequired
+};
 
-// <div>
-//         <input onChange={ onRadioInputChange } type="radio" value="first" name="name" checked={ sort === "first"}/>First Name<br />
-//         <input onChange={ onRadioInputChange } type="radio" value="last" name="name" checked={ sort === "last"}/>Last Name<br />
-//       </div>
+export default SortNameRadio;
