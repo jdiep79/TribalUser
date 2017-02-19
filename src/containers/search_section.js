@@ -22,7 +22,7 @@ class SearchSection extends Component {
       <div>
         <SearchBar term={ this.state.term } onSearchInputChange={ this.onSearchInputChange } />
       </div>
-    )
+    );
   }
 }
 

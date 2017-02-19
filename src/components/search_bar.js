@@ -10,13 +10,13 @@ const SearchBar = ({ term, onSearchInputChange }) => {
           onChange={ onSearchInputChange }
         />
       </form>
-    )
+    );
 }
 
 SearchBar.propTypes = {
   term: PropTypes.string.isRequired,
   onSearchInputChange: PropTypes.func.isRequired
-}
+};
 
 export default SearchBar;
 
