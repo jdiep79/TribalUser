@@ -1,0 +1,17 @@
+.group-list {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.card-img-top {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
