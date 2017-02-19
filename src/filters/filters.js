@@ -1,6 +1,8 @@
-const groupUsersByName = (users) => {
+const groupUsersByName = (users, sort) => {
   return users.reduce((results, user) => {
-    let character = user.email[0];
+    const character = sort === 'first' ?
+      user.name.first[0] :
+      user.name.last[0];
 
     if (!results[character]) {
       results[character] = [];
