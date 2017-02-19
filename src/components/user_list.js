@@ -1,24 +1,29 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
+import  { groupUsersByName } from '../filters/filters';
+import UserGroup from './user_group';
 
-const UserList = (props) => {
-  const users = props.users.map((user) => {
-    return (
-       <div key={ user.cell } className="card">
-          <img className="card-img-top" src={ user.picture.large } alt="User Picture" />
-          <div className="card-block">
-            <h4 className="card-title">{ `${ user.name.first } ${ user.name.last }`}</h4>
-            <p className="card-text">{ `DOB: ${ user.dob }` }</p>
-            <p className="card-text">{ `City: ${ user.location.city  }` }</p>
-          </div>
-      </div>
-    );
+const UserList = ({ list }) => {
+  const groups = groupUsersByName(list);
+  
+  const groupAndSortByName = Object.keys(groups)
+    .sort()
+    .map((letter) => {
+      return (
+        <div key={ letter }>
+          <UserGroup groups={ groups[letter] } letter={ letter } />
+        </div>
+      );
   });
 
   return (
     <div className="users-list">
-      { users }
+      { groupAndSortByName }
     </div>
-  )
-}
+  );
+};
+
+UserList.propTypes = {
+  list: PropTypes.array.isRequired
+};
 
 export default UserList;
