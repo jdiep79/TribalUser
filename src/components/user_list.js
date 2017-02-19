@@ -28,7 +28,8 @@ const UserList = ({ list, term, sort }) => {
 
 UserList.propTypes = {
   list: PropTypes.array.isRequired,
-  term: PropTypes.string.isRequired
+  term: PropTypes.string.isRequired,
+  sort: PropTypes.string.isRequired
 };
 
 export default UserList;

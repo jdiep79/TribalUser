@@ -23,7 +23,8 @@ const UserGroup = ({ groups, letter, sort }) => {
 
 UserGroup.propType = {
   groups: PropTypes.array.isRequired,
-  letter: PropTypes.string.isRequired
+  letter: PropTypes.string.isRequired,
+  sort: PropTypes.string.isRequired
 };
 
 export default UserGroup;
