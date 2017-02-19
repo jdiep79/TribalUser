@@ -20,4 +20,17 @@ const filterSearch = (list, term) => {
   });
 };
 
-export { groupUsersByName, filterSearch };
+const capitalizeFirstLetter = (string) => {
+  return `${string.charAt(0).toUpperCase()}${string.slice(1)}`;
+};
+
+const removeTime = (dateString) => {
+  return dateString.slice(0, 10);
+}
+
+export { 
+  groupUsersByName, 
+  filterSearch, 
+  capitalizeFirstLetter, 
+  removeTime 
+};
