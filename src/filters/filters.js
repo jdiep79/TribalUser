@@ -1,6 +1,8 @@
-const groupUsersByName = (users) => {
+const groupUsersByName = (users, sort) => {
   return users.reduce((results, user) => {
-    let character = user.email[0];
+    const character = sort === 'first' ?
+      user.name.first[0] :
+      user.name.last[0];
 
     if (!results[character]) {
       results[character] = [];
@@ -18,4 +20,17 @@ const filterSearch = (list, term) => {
   });
 };
 
-export { groupUsersByName, filterSearch };
+const capitalizeFirstLetter = (string) => {
+  return `${string.charAt(0).toUpperCase()}${string.slice(1)}`;
+};
+
+const removeTime = (dateString) => {
+  return dateString.slice(0, 10);
+}
+
+export { 
+  groupUsersByName, 
+  filterSearch, 
+  capitalizeFirstLetter, 
+  removeTime 
+};

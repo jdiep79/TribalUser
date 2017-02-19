@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react';
 import User from './user';
 
-const UserGroup = ({ groups, letter }) => {
+const UserGroup = ({ groups, letter, sort }) => {
   const users = groups.map((user) => {
     return (
       <div key={ user.cell } >
-        <User user={ user }/>
+        <User user={ user } sort={ sort }/>
       </div>
     );
   });
@@ -23,7 +23,8 @@ const UserGroup = ({ groups, letter }) => {
 
 UserGroup.propType = {
   groups: PropTypes.array.isRequired,
-  letter: PropTypes.string.isRequired
+  letter: PropTypes.string.isRequired,
+  sort: PropTypes.string.isRequired
 };
 
 export default UserGroup;

@@ -19,14 +19,14 @@ class UserSection extends Component {
   render() {
     return (
       <div>
-        <UserList list={ this.props.users } term={ this.props.term } />
+        <UserList list={ this.props.users } term={ this.props.term } sort={ this.props.sort } />
       </div>
     );
   };
 }
 
-function mapStateToProps({ users, term }) {
-  return { users, term };
+function mapStateToProps({ users, term, sort }) {
+  return { users, term, sort };
 }
 
 function mapDispatchToProps(dispatch) {

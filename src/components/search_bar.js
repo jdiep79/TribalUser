@@ -2,14 +2,17 @@ import React, { PropTypes } from 'react';
 
 const SearchBar = ({ term, onSearchInputChange }) => {
     return (
-      <form className="input-group">
-        <input
-          className="form-control"
-          placeholder="Search..."
-          value={ term }
-          onChange={ onSearchInputChange }
-        />
-      </form>
+      <div className="search-bar">
+        <form className="input-group">
+          <input
+            className="form-control"
+            placeholder="Search..."
+            value={ term }
+            onChange={ onSearchInputChange }
+          />
+        </form>
+      </div>
+     
     );
 };
 
