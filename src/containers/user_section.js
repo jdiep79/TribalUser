@@ -19,7 +19,7 @@ class UserSection extends Component {
   render() {
     return (
       <div>
-        <UserList users={ this.props.users } />
+        <UserList list={ this.props.users } />
       </div>
     );
   };
