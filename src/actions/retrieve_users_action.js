@@ -2,14 +2,12 @@ import axios from 'axios';
 
 export const RETRIEVE_USERS = 'RETRIEVE_USERS';
 
-const retrieveUsers = function() {
+export const retrieveUsersAction = () => {
 	const url = 'https://randomuser.me/api/?results=10'
-	const response = axios.get(url);
+	const request = axios.get(url);
 
 	return {
-		action: RETRIEVE_USERS,
-		payload: response
+		type: RETRIEVE_USERS,
+		payload: request
 	};
-};
-
-export default retrieveUsers;
+}
