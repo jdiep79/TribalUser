@@ -11,4 +11,11 @@ const groupUsersByName = (users) => {
   }, {});
 };
 
-export { groupUsersByName };
+const filterSearch = (list, term) => {
+  return list.filter((user) => {
+    const fullName = `${user.name.first} ${user.name.last}`
+    return fullName.includes(term);
+  });
+};
+
+export { groupUsersByName, filterSearch };

@@ -1,3 +1,12 @@
+/* search section */
+
+.search-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* user section */
+
 .group-list {
   display: flex;
   flex-flow: row wrap;
