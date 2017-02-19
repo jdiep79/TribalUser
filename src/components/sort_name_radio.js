@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 const SortNameRadio = ({ sort, onRadioInputChange  }) => {
   return (
     <div>
-      <h2>Sort By</h2>
+      <h5>Sort By</h5>
       <div>
       <label className="custom-control custom-radio">
         <input 
@@ -17,7 +17,6 @@ const SortNameRadio = ({ sort, onRadioInputChange  }) => {
         <span className="custom-control-indicator"></span>
         <span className="custom-control-description">First Name</span>
       </label>
-      <br />
       <label className="custom-control custom-radio">
          <input 
           name="last" 
