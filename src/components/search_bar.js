@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 const SearchBar = ({ term, onSearchInputChange }) => {
     return (
@@ -11,7 +11,7 @@ const SearchBar = ({ term, onSearchInputChange }) => {
         />
       </form>
     );
-}
+};
 
 SearchBar.propTypes = {
   term: PropTypes.string.isRequired,
